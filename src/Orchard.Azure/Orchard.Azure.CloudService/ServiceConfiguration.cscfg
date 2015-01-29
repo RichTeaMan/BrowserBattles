@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceConfiguration serviceName="OrchardCloudService" osFamily="4" osVersion="*" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" schemaVersion="2014-06.2.4">
+  <Role name="Orchard.Azure.Web">
+    <Instances count="2" />
+    <ConfigurationSettings>
+      <Setting name="Orchard.Azure.Media.StorageConnectionString" value="DefaultEndpointsProtocol=https;AccountName=tomcoorchard;AccountKey=Px+Am/nLISBvoz8tUSdUWBBq2i4UAPi9rPkp637nozhnmcSpMvIm3zWWpNMhtLZGyXm4WSslywD0bliYMdKagA==" />
+      <Setting name="Orchard.Azure.Settings.StorageConnectionString" value="DefaultEndpointsProtocol=https;AccountName=tomcoorchard;AccountKey=Px+Am/nLISBvoz8tUSdUWBBq2i4UAPi9rPkp637nozhnmcSpMvIm3zWWpNMhtLZGyXm4WSslywD0bliYMdKagA==" />
+      <Setting name="Orchard.Azure.OutputCache.HostIdentifier" value="Orchard.Azure.Web" />
+      <Setting name="Orchard.Azure.OutputCache.CacheName" value="OutputCache" />
+      <Setting name="Orchard.Azure.OutputCache.AuthorizationToken" value="" />
+      <Setting name="Orchard.Azure.DatabaseCache.HostIdentifier" value="Orchard.Azure.Web" />
+      <Setting name="Orchard.Azure.DatabaseCache.CacheName" value="DatabaseCache" />
+      <Setting name="Orchard.Azure.DatabaseCache.AuthorizationToken" value="" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Caching.NamedCaches" value="{&quot;caches&quot;:[{&quot;name&quot;:&quot;default&quot;,&quot;policy&quot;:{&quot;eviction&quot;:{&quot;type&quot;:0},&quot;expiration&quot;:{&quot;defaultTTL&quot;:10,&quot;isExpirable&quot;:true,&quot;type&quot;:1},&quot;serverNotification&quot;:{&quot;isEnabled&quot;:false}},&quot;secondaries&quot;:0},{&quot;name&quot;:&quot;SessionStateCache&quot;,&quot;policy&quot;:{&quot;eviction&quot;:{&quot;type&quot;:0},&quot;expiration&quot;:{&quot;defaultTTL&quot;:60,&quot;isExpirable&quot;:true,&quot;type&quot;:2},&quot;serverNotification&quot;:{&quot;isEnabled&quot;:false}},&quot;secondaries&quot;:0},{&quot;name&quot;:&quot;OutputCache&quot;,&quot;policy&quot;:{&quot;eviction&quot;:{&quot;type&quot;:0},&quot;expiration&quot;:{&quot;defaultTTL&quot;:5,&quot;isExpirable&quot;:true,&quot;type&quot;:1},&quot;serverNotification&quot;:{&quot;isEnabled&quot;:false}},&quot;secondaries&quot;:0},{&quot;name&quot;:&quot;DatabaseCache&quot;,&quot;policy&quot;:{&quot;eviction&quot;:{&quot;type&quot;:0},&quot;expiration&quot;:{&quot;defaultTTL&quot;:5,&quot;isExpirable&quot;:true,&quot;type&quot;:1},&quot;serverNotification&quot;:{&quot;isEnabled&quot;:false}},&quot;secondaries&quot;:0}]}" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Caching.DiagnosticLevel" value="1" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Caching.CacheSizePercentage" value="30" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Caching.ConfigStoreConnectionString" value="DefaultEndpointsProtocol=https;AccountName=tomcoorchard;AccountKey=Px+Am/nLISBvoz8tUSdUWBBq2i4UAPi9rPkp637nozhnmcSpMvIm3zWWpNMhtLZGyXm4WSslywD0bliYMdKagA==" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.Enabled" value="true" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountUsername" value="tom" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountEncryptedPassword" value="MIIBnQYJKoZIhvcNAQcDoIIBjjCCAYoCAQAxggFOMIIBSgIBADAyMB4xHDAaBgNVBAMME1dpbmRvd3MgQXp1cmUgVG9vbHMCECfGAkpEpkyHTZuxFJix8s4wDQYJKoZIhvcNAQEBBQAEggEAShzfaQFgAjGHZ6+4lt81cyxMSTm3ptCxvsONY4FvZpoo4w8bXF0T0jFJ6FtkD9tWUh0GQVtXaXTpeoIBRuBzC+WKJk/fjIrdSEO3Nvon0RC1Q1PfR6Cpc1SpLwVxMN/MWE8RL5j/wa2K1rGZyN6S5rADCxR5AxGXPF8AfqVzeMcclrVY/CyhI/bPCYtchDT0ZrHtQcuIZ4y8O1coSV0mhDICEeiFB13T/BMwiJ41cPHyQzcGGj69k1WBNBNPAAmtvui9kmTx2kwk8MLiR+J+HnNdt6Q5khO/PyobU4Fbkd26d1IbdFMcYrqevQsnQU/Aa1VqrKlM8M5xfOd8mrnfADAzBgkqhkiG9w0BBwEwFAYIKoZIhvcNAwcECEPoMYy7X98TgBB52blNaizUbXihpHiLPuCB" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountExpiration" value="2016-02-05T23:59:59.0000000+00:00" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteForwarder.Enabled" value="true" />
+    </ConfigurationSettings>
+    <Certificates>
+      <Certificate name="Microsoft.WindowsAzure.Plugins.RemoteAccess.PasswordEncryption" thumbprint="C45B3A6428693FFB907C9058F6B764898895B5EE" thumbprintAlgorithm="sha1" />
+    </Certificates>
+  </Role>
+</ServiceConfiguration>
